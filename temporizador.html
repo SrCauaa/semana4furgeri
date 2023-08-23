@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem pausada</title>
+    <script>
+        let contador = 0;
+        function aumentar(){
+            document.getElementById("resultado").innerHTML = contador;
+            contador++;
+            if(contador > 10){
+                return; //encerra a execucão da função
+            }
+            setTimeout(aumentar,1000); // 1000 milisegundos = 1 segundos
+
+        }
+        function diminuir(){
+            document.getElementById("resultado").innerHTML = contador;
+            contador--;
+            if(contador < 0){
+                return; //encerra a execucão da função
+            }
+            setTimeout(diminuir,1000); // 1000 milisegundos = 1 segundos
+        }
+    </script>
+</head>
+<body>
+    <button onclick="aumentar()">Aumentar</button>
+    <button onclick="diminuir()">Diminuir</button>
+    <p id="resultado"></p>
+</body>
+</html>

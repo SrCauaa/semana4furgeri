@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geração de valores</title>
+<script>
+    const limite = 100;
+function gerar(){
+    //let n = Math.random();  // 0 a 1
+    for(let i=1; i<=6; i++){
+    let n = parseInt(Math.random() * limite);  // 0 a 1
+    saida += n + " ";
+    }
+    document.getElementById("n1").innerHTML = saida;
+    //alert(n);
+}   
+
+
+
+</script>
+
+
+
+</head>
+<body>
+    <button onclick="gerar()">Ver</button>
+<p id="n1"></p>
+</body>
+</html>

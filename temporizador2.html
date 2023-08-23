@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem pausada</title>
+    <script language="javascript">
+        let contador = 10;
+        function iniciar(){
+            document.getElementById("contador").value = contador;
+            contador--;
+            if(contador < 0){
+                window.close(); 
+            }
+            temp = setTimeout(iniciar,1000); // 1000 milisegundos = 1 segundos
+        }
+    </script>
+</head>
+<body>
+    <button onclick="iniciar()">Iniciar</button>
+    <button onclick="clearTimeout(temp)">Cancelar</button>
+    essa janela ira se fechar em: <input type="text" id="contador" size="2">
+</body>
+</html>
